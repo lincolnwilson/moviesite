@@ -1,0 +1,21 @@
+<br>
+<div class="container text-center mx-auto" style="width:50%;">  
+   <h4>Search Results</h4>
+    <% @movie.each do |moviearr| %>
+     <div class="row">
+     <div class="col-lg-6">
+      <img src="<%= moviearr['Poster'] %>" style="width:100px;height:150px;">
+     </div>
+     <div class="col-lg-6">
+      <dl>
+       <dt>Movie</dt>
+       <dd><%= moviearr['Title'] %></dd>
+       <dt>Release Year</dt>
+       <dd><%= moviearr['Year'] %></dd>
+       <dt>Type</dt>
+       <dd><%= moviearr['Type'].capitalize %></dd>
+      </dl>
+     </div>
+     </div>
+    <% end %>
+</div>
